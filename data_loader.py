@@ -10,4 +10,8 @@ def csv2Tuple(path):
 
 # Data formatter
 def dataFormat(inData):
-    
+    outData = []
+    lineLen = len(inData)
+    for i in range(2, lineLen):
+        outData.append(tuple(inData[i]))
+    return outData

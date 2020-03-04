@@ -1,4 +1,4 @@
-import data_loader
+import data_loader, data_drawer
 
 def debug(debugData):
     import pprint
@@ -6,4 +6,4 @@ def debug(debugData):
 
 dataPath = './data/test_data.csv'
 poleData = data_loader.csv2Tuple(dataPath)
-poleCoor = data_loader
+poleCoor = data_loader.dataFormat(poleData)
