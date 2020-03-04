@@ -13,5 +13,5 @@ def dataFormat(inData):
     outData = []
     lineLen = len(inData)
     for i in range(2, lineLen):
-        outData.append(tuple(inData[i]))
+        outData.append(tuple(inData[i][1:]))
     return outData

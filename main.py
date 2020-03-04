@@ -7,3 +7,4 @@ def debug(debugData):
 dataPath = './data/test_data.csv'
 poleData = data_loader.csv2Tuple(dataPath)
 poleCoor = data_loader.dataFormat(poleData)
+#data_drawer.dataDrawer_All(poleCoor, len(poleCoor))
