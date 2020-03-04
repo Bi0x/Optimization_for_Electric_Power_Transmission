@@ -1,3 +1,9 @@
+#! -*- coding:utf-8 -*-
+#####################################
+#  Author: Biox                     #
+#  Github: ytx2240067446@gmail.com  #
+#####################################
+
 import data_loader, data_drawer
 
 def debug(debugData):
@@ -7,4 +13,4 @@ def debug(debugData):
 dataPath = './data/test_data.csv'
 poleData = data_loader.csv2Tuple(dataPath)
 poleCoor = data_loader.dataFormat(poleData)
-#data_drawer.dataDrawer_All(poleCoor, len(poleCoor))
+data_drawer.dataDrawer_All(poleCoor, 7)
