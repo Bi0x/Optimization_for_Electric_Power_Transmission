@@ -1,8 +1,4 @@
 #! -*- coding:utf-8 -*-
-#####################################
-#  Author: Biox                     #
-#  Github: ytx2240067446@gmail.com  #
-#####################################
 
 import networkx as netx 
 import matplotlib.pyplot as plt 
