@@ -17,4 +17,3 @@ tspName = 'Lanzhi_5803'
 data_loader.tspFileCreator(csvPath, tspName)
 tspProblem = tsplib95.load_problem('./data/tsp_data.tsp')
 graph = tspProblem.get_graph()
-print(graph.edges)

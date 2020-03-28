@@ -6,11 +6,17 @@ class TSPSolution:
         self.rho = rho                  # 信息素挥发因子
         self.q = q                      # 信息素浓度
 
-    def solveStep(self, graph, colony, sales, start, limit, opt):
+    def initPheromone(graph)
+
+    def findSolution(self, graph, colony, sales, start, limit, opt):
         size = len(graph.nodes)
         antColony = colony.colonyInit(size)
+
+        for i, j in graph.edges:
+            w = graph.edges[i, j]['weight']
+            if w == 0:
+
     
-    def solveTSP(self, graph, colony, sales, start, gen_size, limit, opt):
+    def findBest(self, graph, colony, sales, start, gen_size, limit, opt):
         res = -1
-    
-    
+        for i in 
