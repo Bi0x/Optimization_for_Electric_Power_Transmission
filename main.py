@@ -5,12 +5,16 @@
 #####################################
 
 import data_loader, data_drawer
+import tsplib95
+import networkx
 
 def debug(debugData):
     import pprint
     pprint.pprint(debugData)
 
-dataPath = './data/test_data.csv'
-poleData = data_loader.csv2Tuple(dataPath)
-poleCoor = data_loader.dataFormat(poleData)
-data_drawer.dataDrawer_All(poleCoor, 7)
+csvPath = './data/test_data.csv'
+tspName = 'Lanzhi_5803'
+data_loader.tspFileCreator(csvPath, tspName)
+tspProblem = tsplib95.load_problem('./data/tsp_data.tsp')
+graph = tspProblem.get_graph()
+print(graph.edges)
