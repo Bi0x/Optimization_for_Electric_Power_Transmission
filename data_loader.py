@@ -1,6 +1,6 @@
-#! -*- coding:utf-8 -*-
 
 import csv
+import networkx as nx
 
 # CSV Reader
 def csv2Tuple(path):
@@ -16,21 +16,12 @@ def dataFormat(inData):
         outData.append(tuple(inData[i][1:]))
     return outData
 
-def tspFileCreator(csvPath, tspName):
-    tspFile = open('./data/tsp_data.tsp', 'w')
-    poleData = csv2Tuple(csvPath)
-    poleCoor = dataFormat(poleData)
-    tspProblem = 'NAME: ' + tspName + '\n'
-    tspProblem += 'TYPE: TSP\n'
-    tspProblem += 'COMMENT: ' + tspName + ' TSP Problem\n'
-    tspProblem += 'DIMENSION: ' + str(len(poleCoor[0])) + '\n'
-    tspProblem += 'EDGE_WEIGHT_TYPE: EXPLICIT\n'
-    tspProblem += 'EDGE_WEIGHT_FORMAT: FULL_MATRIX\nDISPLAY_DATA_TYPE: NO_DISPLAY\n'
-    tspProblem += 'EDGE_WEIGHT_SECTION\n'
-    for i in range(len(poleCoor)):
-        for j in poleCoor[i]:
-            tspProblem += str(j) + ' '
-        tspProblem += '\n'
-    tspProblem += "EOF"
-    tspFile.write(tspProblem)
-    tspFile.close()
+# Create Graph
+def data2Graph(inData):
+    tmpGraph = nx.Graph()
+    for i in range(len(inData)):
+        for j in range(len(inData)):
+            if i == j:
+                pass
+            tmpGraph.add_edge(i, j, weight=inData[i][j])
+    return tmpGraph

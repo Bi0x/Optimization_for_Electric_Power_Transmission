@@ -1,4 +1,3 @@
-#! -*- coding:utf-8 -*-
 
 class antColony:
     def __init__(self, alpha, beta):
