@@ -12,12 +12,13 @@ class TSPSolution:
         for i, j in graph.edges:
             graph.edges[i, j].setdefault('pheromone', 1 / graph.edges[i, j]['weight'])
 
-    def findSolution(self, graph, colony, sales, startPole, iterTimes, opt):
+    def solution(self, graph, colony, sales, start, gen_size, limit, opt):
+        res = -1
+        initPheromone(graph)
+
+    def runSolve(self, graph, colony, sales, startPole, iterTimes, opt):
         size = len(graph.nodes)
         ants = colony.colonyInit(size)
         for i in range()
 
-    def findBest(self, graph, colony, sales, start, gen_size, limit, opt):
-        res = -1
-        initPheromone(graph)
 
