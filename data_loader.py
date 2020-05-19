@@ -31,6 +31,6 @@ def tspFileCreator(csvPath, tspName):
         for j in poleCoor[i]:
             tspProblem += str(j) + ' '
         tspProblem += '\n'
-    tspProblem += "EOF"
+    tspProblem += "EOF\n"
     tspFile.write(tspProblem)
     tspFile.close()
