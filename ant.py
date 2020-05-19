@@ -1,4 +1,3 @@
-
 class antColony:
     def __init__(self, alpha, beta):
         super().__init__()
