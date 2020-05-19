@@ -1,6 +1,6 @@
-#! -*- coding:utf-8 -*-
 
 import csv
+import networkx as nx
 
 # CSV Reader
 def csv2Tuple(path):
