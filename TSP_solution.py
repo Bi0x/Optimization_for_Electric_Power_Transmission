@@ -19,6 +19,6 @@ class TSPSolution:
     def runSolve(self, graph, colony, sales, startPole, iterTimes, opt):
         size = len(graph.nodes)
         ants = colony.colonyInit(size)
-        for i in range()
+        #for i in range()
 
 
